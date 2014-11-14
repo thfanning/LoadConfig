@@ -1,0 +1,14 @@
+# Bash only reads the .bash_profile startup file when bash is invoked as
+# an interactive login shell or as a non-interactive shell with the --login
+# option. In these cases, it DOES NOT read the .bashrc file, which is where
+# we traditionally put shell configuration scripts.
+#
+# On the other hand, when an interactive shell that is not a login shell starts,
+# is only reads the .bashrc file. Therefore, for all interactive shells
+# (login or otherwise) the following is used in .bash_profile:
+
+# Check to see if this is an interactive shell:
+if [ -n "$PS1" ]; then
+	# Execute the ~/.bashrc file if it exists:
+	[ -r ~/.bashrc ] && . ~/.bashrc
+fi

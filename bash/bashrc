@@ -1,0 +1,26 @@
+# bashrc startup file. This file is invoked for interactive shells. If
+# the interactive shell is a login shell, then it is invoked indirectly
+# through bash_profile
+
+# Bootstrap the loading of configuration scripts:
+[ -r ~/.lcdir/bash/LoadConfig/__Init__.sh ] && \
+	. ~/.lcdir/bash/LoadConfig/__Init__.sh
+
+# Load other bash settings:
+LoadConfig Bash
+
+# Load Aliases:
+LoadConfig Alias
+
+# Use Window Titles:
+LoadConfig WindowTitle
+PROMPT_COMMAND='SetWindowTitle "$(hostname -s) [$(dirs +0)]"'
+alias vi='WindowTitle vi'
+alias man='WindowTitle man'
+alias less='WindowTitle less'
+
+# Spotlight searches
+LoadConfig Spotlight
+
+# Intel Fortran Compiler Environment:
+LoadConfig IFort-Intel64

@@ -1,0 +1,4 @@
+# Global settings for INPUTRC
+
+# Automatically show completion options:
+set show-all-if-ambiguous on 
