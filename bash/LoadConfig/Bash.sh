@@ -13,6 +13,9 @@ ulimit -n 1024
 # Don't accidentally log out:
 IGNOREEOF=2
 
+# Set location of inputrc
+export INPUTRC=~/.lcdir/bash/inputrc
+
 # Include the HOME directory and Documents directory in the 'cd' search path:
 export CDPATH=.:~:~/Documents
 
