@@ -22,13 +22,6 @@ SetWindowTitle ()
 
 WindowTitle ()
 {
-	# Note: Alias definitions are expanded when
-	# this function definition is read, not when
-	# it executes. Therefore, the alias for SetWT
-	# will be expanded, but any alias for $1 will
-	# not, so we don't have to worry about a
-	# recursive loop in the alias definition.
-
 	# Set the window title:
 	local WINDOW_TITLE="$(hostname -s): $@"
 	SetWindowTitle "$WINDOW_TITLE"
