@@ -14,10 +14,10 @@ ulimit -n 1024
 IGNOREEOF=2
 
 # Set location of inputrc
-export INPUTRC=~/.lcdir/bash/inputrc
+INPUTRC=~/.lcdir/bash/inputrc
 
 # Include the HOME directory and Documents directory in the 'cd' search path:
-export CDPATH=.:~:~/Documents
+CDPATH=.:~
 
 # Include ~/bin in PATH at the end:
 export PATH=${PATH}:~/bin
