@@ -7,8 +7,9 @@ alias rm='rm -i'
 
 # Set some file listing aliases:
 alias ls='ls -F'
+alias la='ls -A'
 alias ll='ls -l'
-alias la='ls -a'
+alias lla='ll -A'
 alias lt='ll -t'
 alias lx='ll -@'
 alias le='ll -e'
@@ -16,5 +17,4 @@ alias le='ll -e'
 alias tip="top -s 2 -o cpu -O time -user $USER"
 alias beep='printf "\a"'
 
-alias pd="cd \$OLDPWD"
 alias up="cd .."

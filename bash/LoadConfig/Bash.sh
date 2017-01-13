@@ -5,7 +5,8 @@ PS1='\[\e[32m\]\u@\h\$\[\e[0m\] '
 
 # Set a stronger umask:
 #umask 077
-umask u=rwx,g=,o=
+#umask u=rwx,g=,o=
+umask u=rwx,g=rx,o=rx
 
 # Increase the upper limit on the number of open files:
 ulimit -n 1024
@@ -17,7 +18,7 @@ IGNOREEOF=2
 INPUTRC=~/.lcdir/bash/inputrc
 
 # Include the HOME directory and Documents directory in the 'cd' search path:
-CDPATH=.:~
+#CDPATH=.:~
 
 # Include ~/bin in PATH at the end:
-export PATH=${PATH}:~/bin
+#export PATH=${PATH}:~/bin

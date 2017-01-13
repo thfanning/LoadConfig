@@ -14,13 +14,12 @@ LoadConfig Alias
 
 # Use Window Titles:
 LoadConfig WindowTitle
-PROMPT_COMMAND='SetWindowTitle "$(hostname -s) [$(dirs +0)]"'
-alias vi='WindowTitle vi'
-alias man='WindowTitle man'
-alias less='WindowTitle less'
 
 # Spotlight searches
 LoadConfig Spotlight
+
+# Subversion:
+LoadConfig Subversion
 
 # Intel Fortran Compiler Environment:
 LoadConfig IFort-Intel64

@@ -20,7 +20,9 @@ SetWindowTitle ()
 	printf "\e]0;%s\a" "$*"
 }
 
-WindowTitle ()
+PROMPT_COMMAND='SetWindowTitle "$(hostname -s) [$(dirs +0)]"'
+
+WithWindowTitle ()
 {
 	# Set the window title:
 	local WINDOW_TITLE="$(hostname -s): $@"
@@ -44,3 +46,6 @@ RestoreWindowTitle ()
 	if [ -n "$WINDOW_TITLE" ]; then SetWindowTitle "$WINDOW_TITLE"; fi
 }
 
+alias vi='WithWindowTitle vi'
+alias man='WithWindowTitle man'
+alias less='WithWindowTitle less'
